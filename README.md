@@ -11,7 +11,11 @@ When the magnetic field becomes strong enough, the parallel velocity ($v_\parall
 
 
 
-https://github.com/user-attachments/assets/8d090042-8cd3-4586-b2c4-22d89f8270e2
+
+
+https://github.com/user-attachments/assets/a51226dc-3823-4d79-b7e9-62bacf5c6a37
+
+
 
 
 
