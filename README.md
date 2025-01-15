@@ -23,17 +23,11 @@ The particle reflects when $v_\parallel=0$, meaning it momentarily stops moving 
 
 ![height_velocities](https://github.com/user-attachments/assets/2b96554e-c717-4b1a-beee-63ce745fa2e9)
 
-Regarding to the magnetic moment, we could ask how much slow should be the magnetic field in order to get $\mu$ as an adiabatic constant. <br>
-So we want to get
+ The gradient of the magnetic field ($\nabla B$) plays a crucial role in determining the system's behavior. It governs the adiabaticity of a particle's motion and the conservation of its magnetic moment. Naturally, this raises the question: how small must the gradient be to ensure reflection? The answer is that the magnetic field must vary slowly relative to the particle's motion and we can quantify this behavior by the adiabatic parameter $\epsilon$ defined as
 
-$$\frac{d\mu}{dt}\approx 0$$
+$$\epsilon = \frac{r_L}{L}$$
 
-$$m\frac{d}{dt}\left( \frac{v^2_\perp}{2B}\right)=\frac{m}{2B}\frac{dv^2_\perp}{dt} - \frac{m v^2_\perp}{2B^2}\frac{dB}{dt}$$
-
-We can write the total derivative in time of the magentic field as 
-
-$$\frac{dB}{dt}=\frac{\partial B}{\partial t} + v\cdot \nabla B $$,
-
-where the partial derivative is zero.  
+where $r_L= $ 
+ 
 
 
