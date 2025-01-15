@@ -29,6 +29,7 @@ $$\epsilon = \frac{r_L}{L} <1$$
 
 where $r_L=m v_\parallel/qB$ is the Larmor radius and $L=B/\nabla B$ is the magnetic field gradient scale length.
  
-![epsilon](https://github.com/user-attachments/assets/c66339d1-0cd8-49e3-804f-0492631f7572)
+<img width="448" alt="epsilon" src="https://github.com/user-attachments/assets/96536ab7-3ae0-4363-b796-1f474c216b01" />
+
 
 
