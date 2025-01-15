@@ -39,4 +39,6 @@ where $r_L=m v_\parallel/qB$ is the Larmor radius and $L=B/\nabla B$ is the magn
 <img width="448" alt="epsilon" src="https://github.com/user-attachments/assets/96536ab7-3ae0-4363-b796-1f474c216b01" />
 
 
-
+Symplectic integrator:
+1. Leap frog...
+2. Verlet...
