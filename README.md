@@ -15,7 +15,10 @@ such that for regions where the magnetic field increases, it also does the perpe
 
 $$ E= \frac{1}{2} m ( v^2_\parallel  + v^2_\perp)$$
 
-https://github.com/user-attachments/assets/d3af3fb8-0e09-4d5c-9dde-641a224716e3
+
+
+https://github.com/user-attachments/assets/4d83f835-c17f-469f-8cc9-edb52791b311
+
 
 So when $v^2_\perp$ increases, $v^2_\parallel$ must decrease. 
 The particle reflects when $v_\parallel=0$, meaning it momentarily stops moving along the z axis. At this point all its kinetic energy is in the perpendicular direction ($v_\perp$ is maximized). Then, the particle reverses its direction of motion along the z-axis.
