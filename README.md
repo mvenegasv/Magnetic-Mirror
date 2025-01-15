@@ -1,6 +1,17 @@
 The magnetic mirror corresponds to  ... <br>
 
-Considering a particle with mass m and charge q in a magentic field with
+Magnetic trap using a Bottle profile
+
+
+
+
+https://github.com/user-attachments/assets/38e82c09-b26f-4e67-afc2-482a41cbcfb0
+
+
+
+
+
+In a simpler model, let us considerin a particle with mass m and charge q in a magentic field with
 
 $$B_z=B_{z0}(1+z)$$
 
