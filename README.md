@@ -2,7 +2,7 @@ The magnetic mirror corresponds to  ... <br>
 
 Considering a particle with mass m and charge q in a magentic field with
 
-$$B_z=B_{z0}+z$$
+$$B_z=B_{z0}(1+z)$$
 
 
 When the magnetic field becomes strong enough, the parallel velocity ($v_\parallel$) of the particle goes to zero, and the perpendicular velocity ($v_\perp$) reaches its maximum value. At this point, the particle is reflected and begins moving in the opposite direction along the  z-axis (parallel to the magnetic field lines). 
