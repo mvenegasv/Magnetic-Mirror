@@ -25,9 +25,10 @@ The particle reflects when $v_\parallel=0$, meaning it momentarily stops moving 
 
  The gradient of the magnetic field ($\nabla B$) plays a crucial role in determining the system's behavior. It governs the adiabaticity of a particle's motion and the conservation of its magnetic moment. Naturally, this raises the question: how small must the gradient be to ensure reflection? The answer is that the magnetic field must vary slowly relative to the particle's motion and we can quantify this behavior by the adiabatic parameter $\epsilon$ defined as
 
-$$\epsilon = \frac{r_L}{L}$$
+$$\epsilon = \frac{r_L}{L} <1$$
 
-where $r_L= $ 
+where $r_L=m v_\parallel/qB$ is the Larmor radius and $L=B/\nabla B$ is the magnetic field gradient scale length.
  
+![epsilon](https://github.com/user-attachments/assets/c66339d1-0cd8-49e3-804f-0492631f7572)
 
 
