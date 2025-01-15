@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jan 13 10:19:51 2025
@@ -15,7 +14,7 @@ import matplotlib as mpl
 
 # Set the correct path to FFmpeg
 mpl.rcParams['animation.ffmpeg_path'] = '/opt/homebrew/bin/ffmpeg'
-#%%
+
 
 # Constants
 M = 1.0  # Normalized mass
@@ -93,17 +92,17 @@ def leapfrog(state, dt, n_steps):
     return np.array(positions), np.array(velocities)
 
 # Initial conditions
-v0x = 0.1 #0.2
+v0x = 0.2#0.1 #0.2
 v0y = 0.
-v0z = 0.2 #0.4 #0.7
-x0, y0, z0 = 0., 0., 0  # Initial position 
+v0z = 0.3 #0.2 #0.4 #0.7
+x0, y0, z0 = 0.1, 0.1, 0.5  # Initial position 
 
 # Initial state: [x, y, z, vx, vy, vz]
 state0 = [x0, y0, z0, v0x, v0y, v0z]
 
 # Time step and number of steps
-dt = 2e-4 #1e-3#4e-4
-n_steps =360000  #95000 #60000
+dt = 1e-4#2e-4 
+n_steps = 350000 #360000 
 
 # Solve using leapfrog method
 positions, velocities = leapfrog(state0, dt, n_steps)
@@ -162,7 +161,7 @@ plt.ylabel("$\\epsilon$ ")
 plt.grid()
 plt.show()
 
-#%%
+
 # Plot height distance/ velocities over time
 fig = plt.figure(figsize=(14, 6))
 gs = fig.add_gridspec(1, 2, width_ratios=[1, 1])  
@@ -189,20 +188,21 @@ v_total2 = vx**2 + vy**2 + vz**2  # Total velocity squared
 energy = 0.5 * v_total2  # Kinetic energy (normalized)
 
 # Plot total energy over time
-plt.figure()
-plt.yscale('log')
-plt.xlim(0,25)
-plt.ylim(1e-3,0.1)
-plt.plot(time, mu,color='red',label='magnetic moment [J/T]')
-plt.plot(time, energy,color='blue',label='Total energy [J]' )
-plt.title("Conserved quantities")
-plt.xlabel("Time")
+fig, ax = plt.subplots()
+ax.set_yscale('log')
+ax.tick_params(axis='y',which='both', right=True, labelright=True)
+ax.set_xlim(0,max(time))
+ax.set_ylim(1e-2,1)
+ax.plot(time, mu,color='red',label='magnetic moment [J/T]')
+ax.plot(time, energy,color='blue',label='Total energy [J]' )
+ax.set_title("Conserved quantities")
+ax.set_xlabel("Time")
 plt.legend()
 plt.grid()
 plt.show()
 
 
-#%% 
+
 #Adiabatic Parameter
 epsilon_values = r_L / L_B 
 
@@ -219,8 +219,8 @@ plt.show()
 
 #%%  Animation 1
 # Create a grid in Cartesian coordinates
-x_grid = np.linspace(-0.1, 0.1, 100)  # x range (m)
-z_grid = np.linspace(0, 4.5, 100)  # z range (m)
+x_grid = np.linspace(-0.03, 0.3, 100)  # x range (m)
+z_grid = np.linspace(0, 3.5, 100)  # z range (m)
 X, Z = np.meshgrid(x_grid, z_grid)  # 2D slice in the x-z plane
 R = np.sqrt(X**2)  # Radial distance in the x-z plane
 
@@ -259,7 +259,7 @@ ax2.set_ylim([np.min(y), np.max(y)])
 ax2.set_zlim([np.min(z), np.max(z)])
 
 # Downsample the trajectory to reduce the number of frames
-step = 300  # Keep every 80 points
+step = 300 # Keep every 300 points
 x1 = x[::step]
 y1=y[::step]
 z1 = z[::step]
@@ -285,7 +285,7 @@ def update(frame):
     line_3d.set_3d_properties(z1[:frame])
     point_3d.set_data([x1[frame]], [y1[frame]])
     point_3d.set_3d_properties([z1[frame]])
-    time_text.set_text(f'Time: {time1[frame]:.1} s')
+    time_text.set_text(f'Time: {time1[frame]:.1f} s')
     
     return particle_2d, line_3d, point_3d, time_text
 
@@ -294,7 +294,7 @@ ani = animation.FuncAnimation(fig, update, frames=len(x1), init_func=init, blit=
 
 # Save the combined animation to a file
 writer = FFMpegWriter(fps=50, metadata=dict(artist='Me'), bitrate=1800)
-ani.save('/Users/mv58/Documents/PhD/Plasma/Mirror25/3dtrajectory.mp4', writer=writer)
+ani.save('/Users/mv58/Documents/PhD/Plasma/Mirror25/3dtrajectory_2.mp4', writer=writer)
 
 plt.show()
 
@@ -307,13 +307,15 @@ fig = plt.figure()
 ax1 = fig.add_subplot()
 ax1.set_xlabel('Time [s]')
 ax1.set_yscale('log')
-ax1.set_xlim(0, 25)
-ax1.set_ylim(1e-3, 1e-1)
+ax1.set_xlim(0, max(time1))
+ax1.set_ylim(1e-2, 1)
+ax1.tick_params(axis='y',which='both', right=True, labelright=True)
 ax1.tick_params(axis='both', which='major', labelsize=10) 
 ax1.set_title('Conserved quantities')
 particle_mu, = ax1.plot([], [], color='red',label='Magnetic moment [J/T]')
 particle_energy, = ax1.plot([], [], color='blue',label='Total energy [J]')
 ax1.legend(loc=1)
+
 
 
 # Downsample the trajectory to reduce the number of frames
@@ -344,3 +346,4 @@ ani = animation.FuncAnimation(
 writer = FFMpegWriter(fps=50, metadata=dict(artist='Me'), bitrate=1800)
 ani.save('/Users/mv58/Documents/PhD/Plasma/Mirror25/conservation.mp4', writer=writer)
 plt.show()
+
