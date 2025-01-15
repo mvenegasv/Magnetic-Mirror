@@ -10,7 +10,10 @@ When the magnetic field becomes strong enough, the parallel velocity ($v_\parall
 
 
 
-https://github.com/user-attachments/assets/b2a6c14a-7ae5-4f2d-8ba7-a925dc54be64
+
+https://github.com/user-attachments/assets/8d090042-8cd3-4586-b2c4-22d89f8270e2
+
+
 
 
 In a very slowly magnetic field, the magnetic moment $\mu=mv^2_\perp/2B$ is an adiabatic constant, so it leaves the relation <br>
