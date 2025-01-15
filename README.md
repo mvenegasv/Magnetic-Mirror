@@ -19,10 +19,8 @@ $$ E= \frac{1}{2} m ( v^2_\parallel  + v^2_\perp)$$
 
 https://github.com/user-attachments/assets/4d83f835-c17f-469f-8cc9-edb52791b311
 
-
-So when $v^2_\perp$ increases, $v^2_\parallel$ must decrease. 
-The particle reflects when $v_\parallel=0$, meaning it momentarily stops moving along the z axis. At this point all its kinetic energy is in the perpendicular direction ($v_\perp$ is maximized). Then, the particle reverses its direction of motion along the z-axis.
-
+When $v^2_\perp$ increases, $v^2_\parallel$ must decrease to conserve the particle's total kinetic energy. Reflection occurs when 
+$v^2_\parallel=0$, meaning the particle momentarily comes to a stop along the z-axis. At this point, all its kinetic energy is concentrated in the perpendicular direction ($v^2_\perp$ is maximized). Afterward, the particle reverses its direction of motion along the z-axis
 
 ![height_velocities](https://github.com/user-attachments/assets/2b96554e-c717-4b1a-beee-63ce745fa2e9)
 
