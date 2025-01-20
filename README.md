@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/38e82c09-b26f-4e67-afc2-482a41cbcfb0
 
 
 
-In a simpler model, let us considerin a particle with mass m and charge q in a magentic field with
+ Let's start with a simpler model, where a particle with mass m and charge q is under the effect of a magentic field where the z profile is given by
 
 $$B_z=B_{z0}(1+z)$$
 
